@@ -1,0 +1,5 @@
+/* Electronic room — brutalist, cyan grid */
+[data-genre="Electronic"] {
+  --room-accent: #00d4ff;
+  --room-bg: linear-gradient(160deg, rgba(0,16,24,0.65) 0%, rgba(0,5,10,0.3) 100%);
+}

@@ -1,0 +1,5 @@
+/* Post-Rock room — deep teal, wide-open */
+[data-genre="Post-Rock"] {
+  --room-accent: #4ecdc4;
+  --room-bg: linear-gradient(160deg, rgba(0,20,18,0.55) 0%, rgba(10,10,10,0.3) 100%);
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dead Wax — About</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/about.css" />
+</head>
+<body>
+  <div class="scene" aria-hidden="true">
+    <div class="scene__bg"></div>
+    <div class="scene__scanlines"></div>
+    <div class="scene__vignette"></div>
+  </div>
+
+  <nav class="top-nav">
+    <span class="top-nav__wordmark">Dead Wax</span>
+    <ul class="top-nav__links">
+      <li><a href="index.html">Floor</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="editorial.html">Editorial</a></li>
+    </ul>
+  </nav>
+
+  <main class="about-page">
+    <article class="liner-notes">
+      <header class="liner-notes__header">
+        <h1 class="liner-notes__title">Dead Wax</h1>
+        <p class="liner-notes__subtitle u-mono u-dim">Liner notes</p>
+      </header>
+
+      <div class="liner-notes__body">
+        <p>
+          The dead wax is the area between the last groove and the label — the part of a record that holds no
+          music, just the hand-etched marks left by the cutting engineer. A reference number. A secret message.
+          Proof that a human made this.
+        </p>
+
+        <p>
+          This is a personal archive. Every record here was ripped, tagged, and listened to. Nothing is here
+          by algorithm. The genres are rooms in a store I've been building in my head for years — each one with
+          its own light and temperature.
+        </p>
+
+        <p>
+          Use the floor to browse. Use the bag to collect. Copy the list and take it somewhere else.
+          That's all this needs to do.
+        </p>
+      </div>
+
+      <footer class="liner-notes__footer u-mono u-dim">
+        <!-- Stats injected here by about.js once written -->
+        <span id="about-stats">Loading stats…</span>
+      </footer>
+    </article>
+  </main>
+
+  <script type="module">
+    // Quick stats from library.json
+    fetch('./data/library.json')
+      .then(r => r.json())
+      .then(lib => {
+        const albums  = lib.length;
+        const tracks  = lib.reduce((n, a) => n + a.tracks.length, 0);
+        const genres  = new Set(lib.map(a => a.genre)).size;
+        const years   = lib.map(a => a.year).filter(Boolean);
+        const span    = years.length ? `${Math.min(...years)}–${Math.max(...years)}` : '—';
+        document.getElementById('about-stats').textContent =
+          `${albums.toLocaleString()} albums · ${tracks.toLocaleString()} tracks · ${genres} rooms · ${span}`;
+      })
+      .catch(() => {
+        document.getElementById('about-stats').textContent = '';
+      });
+  </script>
+</body>
+</html>

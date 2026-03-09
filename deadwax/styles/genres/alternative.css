@@ -1,0 +1,5 @@
+/* Alternative room — faded denim, slate blue */
+[data-genre="Alternative"] {
+  --room-accent: #7da8c4;
+  --room-bg: linear-gradient(160deg, rgba(8,18,32,0.55) 0%, rgba(10,10,10,0.3) 100%);
+}

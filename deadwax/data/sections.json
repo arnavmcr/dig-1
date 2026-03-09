@@ -1,0 +1,23 @@
+[
+  {
+    "id": "editors-picks",
+    "label": "Editor's Picks",
+    "description": "Records worth digging for.",
+    "design": "featured",
+    "albums": []
+  },
+  {
+    "id": "late-night",
+    "label": "Late Night",
+    "description": "Low-light listening.",
+    "design": "standard",
+    "albums": []
+  },
+  {
+    "id": "floor-movers",
+    "label": "Floor Movers",
+    "description": "High-energy, no excuses.",
+    "design": "standard",
+    "albums": []
+  }
+]

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dead Wax — Editorial</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <style>
+    body { overflow: auto; }
+    .scene { position: fixed; inset: 0; z-index: 0; }
+    .scene__bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1615247001958-f4bc92fa6a4a?w=1920&q=80') center/cover no-repeat; filter: grayscale(0.3) brightness(0.2); }
+    .scene__scanlines { position: absolute; inset: 0; background: repeating-linear-gradient(to bottom, transparent, transparent 2px, rgba(0,0,0,0.15) 2px, rgba(0,0,0,0.15) 4px); }
+    .scene__vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.85) 100%); }
+    .editorial-page { position: relative; z-index: 10; min-height: 100vh; padding: 5rem 2rem 4rem; max-width: 900px; margin: 0 auto; }
+    .editorial-header { margin-bottom: 3rem; }
+    .editorial-header h1 { font-family: var(--font-mono); font-size: var(--font-size-2xl); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-accent); }
+    .editorial-header p { margin-top: 0.5rem; font-size: var(--font-size-sm); color: var(--color-text-dim); }
+    .editorial-placeholder { margin-top: 4rem; padding: 2rem; border: 1px dashed var(--color-border); font-family: var(--font-mono); font-size: var(--font-size-sm); color: var(--color-text-muted); }
+  </style>
+</head>
+<body>
+  <div class="scene" aria-hidden="true">
+    <div class="scene__bg"></div>
+    <div class="scene__scanlines"></div>
+    <div class="scene__vignette"></div>
+  </div>
+
+  <nav class="top-nav" style="position:fixed;top:0;left:0;right:0;height:48px;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;background:linear-gradient(to bottom,rgba(0,0,0,0.9),transparent);">
+    <span style="font-family:var(--font-mono);font-size:1rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--color-accent);">Dead Wax</span>
+    <ul style="display:flex;gap:1.5rem;list-style:none;">
+      <li><a href="index.html" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-dim);">Floor</a></li>
+      <li><a href="about.html" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-dim);">About</a></li>
+      <li><a href="editorial.html" aria-current="page" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text);">Editorial</a></li>
+    </ul>
+  </nav>
+
+  <main class="editorial-page">
+    <header class="editorial-header">
+      <h1>Editorial</h1>
+      <p>Picks, notes, and featured sections. Pulled from sections.json.</p>
+    </header>
+
+    <div id="editorial-content">
+      <!-- Sections rendered by JS -->
+    </div>
+
+    <div class="editorial-placeholder">
+      [ sections.json is empty — add curator picks to data/sections.json to populate this page ]
+    </div>
+  </main>
+
+  <script type="module">
+    // Future: render sections from sections.json + library.json here
+    fetch('./data/sections.json')
+      .then(r => r.json())
+      .then(sections => {
+        const hasContent = sections.some(s => s.albums.length > 0);
+        if (hasContent) {
+          document.querySelector('.editorial-placeholder').style.display = 'none';
+        }
+        // Render logic goes here in a future session
+      })
+      .catch(() => {});
+  </script>
+</body>
+</html>

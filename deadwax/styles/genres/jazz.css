@@ -1,0 +1,5 @@
+/* Jazz room — newsprint grain, muted amber */
+[data-genre="Jazz"] {
+  --room-accent: #c8a96e;
+  --room-bg: linear-gradient(160deg, rgba(22,16,4,0.55) 0%, rgba(10,10,10,0.3) 100%);
+}

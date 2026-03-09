@@ -1,0 +1,5 @@
+/* Other room — default gold */
+[data-genre="Other"] {
+  --room-accent: var(--color-accent);
+  --room-bg: linear-gradient(160deg, rgba(18,14,8,0.5) 0%, rgba(10,10,10,0.3) 100%);
+}

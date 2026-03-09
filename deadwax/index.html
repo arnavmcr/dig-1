@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dead Wax</title>
+  <meta name="description" content="A personal record store. Browse by genre room." />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/floor.css" />
+
+  <!-- Genre room tokens — each scoped to [data-genre="..."] -->
+  <link rel="stylesheet" href="styles/genres/rock.css" />
+  <link rel="stylesheet" href="styles/genres/alternative.css" />
+  <link rel="stylesheet" href="styles/genres/metal.css" />
+  <link rel="stylesheet" href="styles/genres/punk.css" />
+  <link rel="stylesheet" href="styles/genres/electronic.css" />
+  <link rel="stylesheet" href="styles/genres/indie.css" />
+  <link rel="stylesheet" href="styles/genres/post-rock.css" />
+  <link rel="stylesheet" href="styles/genres/hip-hop.css" />
+  <link rel="stylesheet" href="styles/genres/classical.css" />
+  <link rel="stylesheet" href="styles/genres/soundtrack.css" />
+  <link rel="stylesheet" href="styles/genres/emo.css" />
+  <link rel="stylesheet" href="styles/genres/pop.css" />
+  <link rel="stylesheet" href="styles/genres/progressive.css" />
+  <link rel="stylesheet" href="styles/genres/folk.css" />
+  <link rel="stylesheet" href="styles/genres/jazz.css" />
+  <link rel="stylesheet" href="styles/genres/soul.css" />
+  <link rel="stylesheet" href="styles/genres/world.css" />
+  <link rel="stylesheet" href="styles/genres/other.css" />
+</head>
+
+<body>
+
+  <!-- ── Background scene ── -->
+  <div class="scene" aria-hidden="true">
+    <div class="scene__bg"></div>
+    <div class="scene__scanlines"></div>
+    <div class="scene__vignette"></div>
+  </div>
+
+  <!-- ── Top navigation ── -->
+  <nav class="top-nav" role="navigation" aria-label="Main navigation">
+    <span class="top-nav__wordmark">Dead Wax</span>
+    <ul class="top-nav__links">
+      <li><a href="index.html" aria-current="page">Floor</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="editorial.html">Editorial</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Floor (horizontal scroll) ── -->
+  <main id="floor" class="floor" role="main" aria-label="Record store floor">
+    <!-- Rooms injected by app.js -->
+  </main>
+
+  <!-- ── Section nav dots ── -->
+  <div id="floor-nav" class="floor-nav" role="navigation" aria-label="Jump to section"></div>
+
+  <!-- ── Detail panel ── -->
+  <aside id="detail-panel" class="detail-panel" aria-label="Album detail" aria-hidden="true">
+    <button id="detail-close" class="detail-panel__close" aria-label="Close detail">✕</button>
+    <div class="detail-panel__art"></div>
+    <p class="detail-panel__artist"></p>
+    <h1 class="detail-panel__album"></h1>
+    <div class="detail-panel__meta"></div>
+    <ul class="detail-panel__tracklist" aria-label="Track listing"></ul>
+    <button class="detail-panel__add-btn">+ Add to bag</button>
+  </aside>
+
+  <!-- ── Bag tray ── -->
+  <footer class="bag-tray" aria-label="Your bag">
+    <span class="bag-tray__label u-mono">Bag</span>
+    <div id="bag-items" class="bag-tray__items" aria-label="Bagged records" role="list"></div>
+    <div class="bag-tray__actions">
+      <button id="bag-copy" class="btn">Copy list</button>
+      <button id="bag-clear" class="btn">Clear</button>
+    </div>
+  </footer>
+
+  <!-- ── App ── -->
+  <script type="module" src="scripts/app.js"></script>
+
+</body>
+</html>

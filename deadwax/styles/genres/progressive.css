@@ -1,0 +1,5 @@
+/* Progressive room — prismatic, shifting */
+[data-genre="Progressive"] {
+  --room-accent: #88d498;
+  --room-bg: linear-gradient(160deg, rgba(4,20,12,0.5) 0%, rgba(10,10,10,0.3) 100%);
+}

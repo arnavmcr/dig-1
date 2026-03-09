@@ -1,0 +1,5 @@
+/* Soundtrack room — cinematic purple */
+[data-genre="Soundtrack"] {
+  --room-accent: #b07fd4;
+  --room-bg: linear-gradient(160deg, rgba(14,4,24,0.6) 0%, rgba(10,10,10,0.3) 100%);
+}

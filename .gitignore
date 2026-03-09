@@ -1,0 +1,27 @@
+# Data & pipeline files — not for the repo
+*.csv
+*.log
+*.jsonl
+
+# Caches
+mb_cache.json
+lastfm_cache.json
+claude_progress.csv
+
+# Artwork directory (large binary files)
+artwork/
+
+# Python scripts — pipeline only, not needed for deploy
+*.py
+build_library_json.py
+
+# Reports
+stage1_report.txt
+stage2_report.txt
+stage3_report.txt
+
+# Roadmap doc (optional — remove this line if you want it tracked)
+DEADWAX_ROADMAP.md
+
+# macOS
+.DS_Store

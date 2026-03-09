@@ -1,0 +1,5 @@
+/* World room — saffron */
+[data-genre="World"] {
+  --room-accent: #f5a623;
+  --room-bg: linear-gradient(160deg, rgba(24,14,0,0.5) 0%, rgba(10,10,10,0.3) 100%);
+}

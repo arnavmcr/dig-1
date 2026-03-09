@@ -1,0 +1,5 @@
+/* Punk room — xerox yellow, torn-paper energy */
+[data-genre="Punk"] {
+  --room-accent: #e8c94a;
+  --room-bg: linear-gradient(160deg, rgba(30,24,0,0.55) 0%, rgba(10,10,10,0.3) 100%);
+}

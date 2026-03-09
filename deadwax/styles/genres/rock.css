@@ -1,0 +1,5 @@
+/* Rock room — worn tape, muted red, gritty */
+[data-genre="Rock"] {
+  --room-accent: #c0392b;
+  --room-bg: linear-gradient(160deg, rgba(40,8,8,0.55) 0%, rgba(10,10,10,0.3) 100%);
+}

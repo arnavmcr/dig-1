@@ -1,0 +1,5 @@
+/* Soul room — deep burgundy */
+[data-genre="Soul"] {
+  --room-accent: #c45c7a;
+  --room-bg: linear-gradient(160deg, rgba(24,4,10,0.55) 0%, rgba(10,10,10,0.3) 100%);
+}

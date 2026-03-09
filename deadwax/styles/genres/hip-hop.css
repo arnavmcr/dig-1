@@ -1,0 +1,5 @@
+/* Hip-Hop room — block type, neon orange */
+[data-genre="Hip-Hop"] {
+  --room-accent: #ff6b35;
+  --room-bg: linear-gradient(160deg, rgba(25,8,0,0.6) 0%, rgba(10,10,10,0.3) 100%);
+}
